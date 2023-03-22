@@ -37,7 +37,7 @@ namespace D8_porting_WPF
             else if(e.Key == Key.A)
             {
                 Title.Text = "AAAAAAAAAH!";
-                Text.Text = "Namen aaaaah!";
+                Text.Text = "Namen aaaaah!\nÅååååh!\nÄäääää!";
             }
             else if (e.Key == Key.I)
             {
