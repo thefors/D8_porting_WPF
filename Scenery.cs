@@ -58,16 +58,17 @@ namespace D8_porting_WPF
         {
             if (command == "n") { current = scenes[current].Next; }
             else if (command == "p") { current = scenes[current].Previous; }
-            else if (command == "s") { }
-            else { }
+            else if (command == "s") { current = current; }
+            else if (command == "x") { current = 0; }
+            else { current = current; }
         }
 
-        internal static string CurrentTitle(string command)
+        internal static string CurrentTitle()
         {
             return scenes[current].Title;
         }
 
-        internal static string CurrentText(string command)
+        internal static string CurrentText()
         {
             return scenes[current].Text;
         }

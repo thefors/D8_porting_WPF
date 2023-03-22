@@ -24,9 +24,13 @@ namespace D8_porting_WPF
         {
             InitializeComponent();
             // Gör all initiering nedanför den här texten!
+            Title.Text = Scenery.HelpTitle();
+            Text.Text = Scenery.HelpText();
         }
         private void ApplicationKeyPress(object sender, KeyEventArgs e)
         {
+
+
             string output = "Key pressed: ";
             output += e.Key.ToString();
             KeyPressDisplay.Text = output;
@@ -34,20 +38,30 @@ namespace D8_porting_WPF
             {
                 System.Windows.Application.Current.Shutdown();
             }
-            else if(e.Key == Key.A)
+            else if (e.Key == Key.F)
             {
-                Title.Text = "AAAAAAAAAH!";
-                Text.Text = "Namen aaaaah!\nÅååååh!\nÄäääää!";
+                Scenery.DoCommand("p");
+                Title.Text = Scenery.CurrentTitle();
+                Text.Text = Scenery.CurrentText();
             }
-            else if (e.Key == Key.I)
+            else if(e.Key == Key.N)
             {
-                Title.Text = "IIIIIIIIIH!";
-                Text.Text = "Jasäjabah iiiiiiiih!";
+                Scenery.DoCommand("n");
+                Title.Text = Scenery.CurrentTitle();
+                Text.Text = Scenery.CurrentText();
             }
-            else if( e.Key == Key.O)
+            
+            else if( e.Key == Key.S)
             {
-                Title.Text = "OOOOOOOOOOH";
-                Text.Text = "ooo oooooooh oo";
+                Scenery.DoCommand("s");
+                Title.Text = Scenery.CurrentTitle();
+                Text.Text = Scenery.CurrentText();
+            }
+            else if( e.Key == Key.X)
+            {
+                Scenery.DoCommand("x");
+                Title.Text = Scenery.CurrentTitle();
+                Text.Text = Scenery.CurrentText();
             }
         }
     }
