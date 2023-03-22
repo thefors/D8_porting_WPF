@@ -44,6 +44,11 @@ namespace D8_porting_WPF
                 Title.Text = "IIIIIIIIIH!";
                 Text.Text = "Jasäjabah iiiiiiiih!";
             }
+            else if( e.Key == Key.O)
+            {
+                Title.Text = "OOOOOOOOOOH";
+                Text.Text = "ooo oooooooh oo";
+            }
         }
     }
 }
